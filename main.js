@@ -1,0 +1,1 @@
+document.write('<style>.templatefly a{opacity: 0.1;position: absolute;font-size:1px;z-index: -99;}</style><div class="templatefly"><a href="https://www.mrjaz.com/">1</a><a href="https://templatefly.mrjaz.com/">2</a></div>')
