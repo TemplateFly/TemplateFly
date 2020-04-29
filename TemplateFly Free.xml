@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang="en" b:css="false" b:defaultwidgetversion="2" b:layoutsVersion="3" b:responsive="true" expr:dir="data:blog.languageDirection" expr:lang='data:blog.locale'>
+
+<head>
+    <meta content='width=device-width, initial-scale=1, minimum-scale=1' name='viewport'/>
+    <title>
+        <data:view.title.escaped />
+    </title>
+
+    <!-- Template Customize Style -->
+    <b:skin>
+        <![CDATA[
+    
+/*-----------------------------------------------
+My Template Style
+Name:     Templatefly
+Version:  1.0v
+Designer: Sonu Kumar
+----------------------------------------------- */
+
+
+/* All CSS */
+
+/* ------- All light Mode color ------- */
+
+:root {
+    --body_bg: fixed linear-gradient(130deg, hsl(260, 77%, 43%) 0%, #cc2b5e 90%) no-repeat;
+    --post_bg: hsl(0, 0%, 20%);
+    --text_cl: #ffff;
+    --text_bg: hsl(0, 0%, 30%);
+    --menu_text_bg: hsl(0, 0%, 25%);
+
+    --menu_icon: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 42" style="fill:none;stroke:%23ffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8px" %3E%3Cline x1="4" y1="4" x2="46" y2="4"/%3E%3Cline x1="4" y1="4" x2="46" y2="4"/%3E%3Cline x1="4" y1="21" x2="46" y2="21"/%3E%3Cline x1="4" y1="21" x2="46" y2="21" /%3E%3Cline x1="4" y1="38" x2="46" y2="38"/%3E%3Cline x1="4" y1="38" x2="46" y2="38" /%3E%3C/svg%3E');
+    --cros_icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' style='fill:none;stroke:%23ffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8px'%3E%3Cline x1='4' y1='4' x2='46' y2='46' /%3E%3Cline x1='46' y1='4' x2='4' y2='46' /%3E%3C/svg%3E");
+    --search_icon: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" style="fill:none;stroke:%23ffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8px" %3E%3Cline x1="34" y1="34" x2="46" y2="46" /%3E%3Ccircle cx="20.5" cy="20.5" r="16.5" /%3E%3C/svg%3E');
+
+}
+
+
+
+/* ------- Full Body Style CSS ------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    -webkit-tap-highlight-color: transparent;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    transition: all ease-in-out 0.3s;
+    border: none;
+
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--body_bg);
+}
+
+
+
+
+/* ------- Full  header Logo_menu logo_widgets menu_widgets ------- */
+
+.header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--post_bg);
+    padding: 0 20px;
+    border-radius: 0 0 25px 25px;
+    z-index: 3;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+
+.logo_widgets img {
+    position: relative;
+    width: auto;
+    height: 35px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+/* ------- header menu_widgets ------- */
+
+.header_menu ul li {
+    display: inline-block;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.header_menu ul a{
+    color: var(--text_cl);
+}
+.header_menu ul a:hover{
+    color: hsl(250, 100%, 65%);
+}
+
+
+.menu_widgets {}
+
+.full_menu {
+    display: flex;
+}
+
+.menu_icon {
+    visibility: hidden;
+}
+
+.menu_search_bg {
+    visibility: hidden;
+}
+
+.mobile_menu_bg {
+    visibility: hidden;
+}
+
+/* ------- header search_box  search_btn ------- */
+
+.search_box {
+    margin: 0 0 0 5px;
+    background-color: var(--text_bg);
+    width: 175px;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 25px;
+    font-size: 12px;
+    color: var(--text_cl);
+    cursor: pointer;
+}
+
+.search_box::placeholder {
+    color: var(--text_cl);
+}
+
+.search_box::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    background-image: var(--cros_icon);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+
+
+.search_btn {
+    background-image: var(--search_icon);
+    background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--text_bg);
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    padding: 8px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.search_btn:hover{
+    background-color: hsl(250, 100%, 65%);
+}
+
+
+
+.mobile_search_bg {
+    visibility: hidden;
+}
+
+.menu_search_button {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+
+
+
+
+/* body_widgets post_widgets sidebar_widgets */
+
+
+
+.body_widgets {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+}
+
+
+
+.post_widgets {
+  width: 70%;
+  height: 100%;
+  padding: 10px;
+}
+
+.multiple_post{
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(265px, auto)) ;
+}
+
+.multiple_post article {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.multiple_post article img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  
+.multiple_post article:hover img {
+    filter:brightness(1.2);
+}
+
+.multiple_post .multiple_post_title {
+    margin: 5px 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.multiple_post .multiple_post_title h1{
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.multiple_post article:hover .multiple_post_title h1{
+    color: hsl(250, 100%, 65%);
+}
+
+.multiple_post .multiple_post_detail {
+    margin: 15px 0 5px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.multiple_post .multiple_post_detail a{
+    font-weight: bold;
+    opacity: 0.7;
+    font-size: 10px;
+    color: black;
+    cursor: pointer;
+    word-spacing: 1px;
+    text-transform: uppercase;
+ 
+}
+
+.multiple_post .multiple_post_detail a:hover{
+    color: hsl(250, 100%, 65%);
+}
+
+.multiple_post_Pagination{
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.multiple_post_Pagination a{
+    color: black;
+}
+
+.multiple_post_Pagination a:hover{
+    color: hsl(250, 100%, 65%);
+}
+
+.Pagination_nolink{
+    opacity: 0.5;
+    cursor: default;
+    color: black !important;
+}
+
+.Pagination_nolink:hover{
+    color: black !important;
+}
+
+.single_post{
+    width: 95%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 0 auto;
+  }
+
+
+.single_post .single_post_Pagination{
+    margin: 0 0 10px 0;
+    opacity: 0.7;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.single_post .single_post_Pagination a{
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+    cursor: pointer;
+    word-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.single_post .single_post_Pagination a:hover{
+    color: hsl(250, 100%, 65%);
+    opacity: 1;
+}
+
+.single_post h1{
+    margin: 15px 0;
+    text-align: center;
+    text-transform: capitalize;
+    color: hsl(250, 100%, 65%);
+    cursor: default;
+    font-size: 18px;
+}
+.single_post .single_post_labels{
+    text-align: center;
+
+}
+.single_post .single_post_labels a{
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+    word-spacing: 1px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 4px 7px;
+    border-radius: 25px;
+    line-height: 30px;
+    margin: 0 2px;
+}
+
+.single_post .single_post_labels a:hover{
+    color: hsl(250, 100%, 65%);
+}
+
+.single_post .single_post_date {
+   margin: 10px 0 0 0;
+    text-align: center;
+    
+}
+.single_post .single_post_date a{
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+    cursor: pointer;
+    word-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.single_post .post-body{
+    margin: 15px 0;
+    padding: 15px 0;
+    border-top:1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    line-height: 24px;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+
+.single_post .post-body img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 70%;
+    height: auto;
+}
+
+
+.sidebar_widgets {
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    position: sticky;
+    top: 70px;
+}
+
+
+.right_sidebar {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 15px;
+  margin: 0 0 15px 0;
+  cursor: default;
+}
+
+.right_sidebar .title{
+    text-align: center;
+    border-bottom: 1px solid hsla(0, 0%, 80%, 1);
+    padding: 0 0 10px 0; 
+    font-size: 16px;
+}
+
+.right_sidebar p{
+    margin: 10px 0;
+    text-align: justify;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+
+.right_sidebar .Subscribe_form{
+   
+}
+
+.right_sidebar .Subscribe_form input{
+    width: 100%;
+    padding: 8px 15px;
+    margin: 5px 0 0 0;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.right_sidebar .Subscribe_form input[type=email]{
+    background-color:rgba(0, 0, 0, 0.05);
+    cursor: auto;
+    font-size: 12px;
+}
+
+.right_sidebar .Subscribe_form input[type=submit]{
+    background-color:hsl(250, 100%, 65%);
+    color:white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.right_sidebar .Subscribe_form input[type=submit]:hover{
+    background-color:hsl(0, 0%, 30%);
+}
+.footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--post_bg);
+    padding: 0 20px;
+    border-radius: 25px 25px 0 0px;
+    letter-spacing: 0.5px;
+}
+
+
+.footer_menu, .footer_copyright {
+    width: 50%;
+    text-align: center;
+    cursor: default;
+}
+
+.footer_menu a:hover, .footer_copyright a:hover{
+    color: hsl(250, 100%, 65%);
+}
+
+.footer_menu a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+    color: var(--text_cl);
+    cursor: pointer;
+}
+
+
+.Border_line{
+    border-left: 1px solid hsla(0, 0%, 50%, 1);
+    height: 20px;
+}
+  
+.footer_copyright {
+    font-size: 14px;
+    color: var(--text_cl);
+}
+
+.footer_copyright a{
+    color: var(--text_cl);
+}
+
+    /*-- .content_form_bg --*/
+
+.content_form_bg{
+    background-color: hsl(0, 0%, 95%);
+    width: auto;
+    border-radius: 10px;
+}
+.content_form{
+    margin: 10px auto;
+    width: 75%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content_form label{
+    font-size: 16px;
+}
+
+.content_form > .contact_form_name, .contact_form_email, .contact_form_message, #ContactForm1_contact-form-submit{
+    margin: 5px 0 15px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%, 80%);
+}
+
+.content_form > .contact_form_name:hover, .contact_form_email:hover, .contact_form_message:hover{
+    border: 1px solid hsl(250, 100%, 65%)
+}
+
+.contact_form_message{
+    min-height: 150px;
+    resize: vertical;
+    overflow: auto;
+}
+
+#ContactForm1_contact-form-submit{
+    border: none;
+    color: white;
+    background-color: hsl(0, 0%, 30%);
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+#ContactForm1_contact-form-submit:hover{
+    background-color: hsl(250, 100%, 65%);
+}
+
+#ContactForm1_contact-form-error-message, #ContactForm1_contact-form-success-message{
+    text-align: center;
+}
+
+#ContactForm1_contact-form-error-message img{
+    display: inline-block;
+    width: 10px;
+    border-radius: unset;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width:1000px) {
+
+
+    /* mobile header Logo_menu logo_widgets menu_widgets */
+
+
+
+    /* -- mobile menu -- */
+
+
+    .menu_icon {
+        background-image: var(--menu_icon);
+        visibility: visible;
+        background-size: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        padding: 7px;
+        border-radius: 25px;
+        background-color: var(--text_bg);
+        cursor: pointer;
+    }
+
+    .menu_icon:hover{
+        background-color: hsl(250, 100%, 65%);
+    }
+
+    .menu_button .menu_icon {
+        background-image: var(--cros_icon);
+        background-size: 14px;
+    }
+
+
+    .menu_search_bg {
+        width: 100%;
+        min-height: 100%;
+        background: rgb(0, 0, 0);
+        top: 0px;
+        left: 0px;
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .menu_button .menu_search_bg {
+        visibility: visible;
+        opacity: 0.6;
+    }
+
+
+    .mobile_menu_bg {
+        width: 70%;
+        height: 100vh;
+        background-color: var(--menu_text_bg);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        transform: translateX(-100%);
+    }
+
+    .menu_button .mobile_menu_bg {
+        transform: none;
+        visibility: visible;
+    }
+
+
+    .side_menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 50px 0 0 0;
+        width: 70%;
+        height: 100%;
+        padding: 20px;
+        justify-content: space-between;
+        transform: translateX(-100%);
+        visibility: hidden;
+    }
+
+    .menu_button .side_menu {
+        transform: none;
+        visibility: visible;
+    }
+
+
+    .header_menu ul li {
+        border-radius: 25px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 15px 0;
+        background-color: hsl(0, 0%, 30%);
+        letter-spacing: 0.5px;
+    }
+
+
+    /* -- mobile search box -- */
+
+
+
+    .menu_search_button {
+        background-image: var(--search_icon);
+        background-size: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        padding: 7px;
+        margin-left: 10px;
+        border-radius: 25px;
+        background-color: var(--text_bg);
+        cursor: pointer;
+        visibility: visible;
+    }
+    
+    .menu_search_button:hover{
+        background-color: hsl(250, 100%, 65%);
+    }
+
+    .search_button .menu_search_button {
+        background-image: var(--cros_icon);
+        background-size: 14px;
+
+    }
+
+
+    .mobile_search_bg {
+        width: 100%;
+        height: 110px;
+        background-color: var(--menu_text_bg);
+        position: fixed;
+        top: 0;
+        overflow: hidden;
+        border-radius: 0 0 25px 25px;
+        transform: translatey(-100%);
+        transition-delay: 0.3s;
+        z-index: 2;
+    }
+
+    .search_button .mobile_search_bg {
+        transform: none;
+        visibility: visible;
+        transition-delay: 0s;
+    }
+
+    .search {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 65px;
+        padding: 0 20px;
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        transition-delay: 0s;
+    }
+
+    .search_button .search {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0.3s;
+    }
+
+    .search_box {
+        width: 100%;
+        margin: 0 10px 0 0;
+        padding: 0 15px;
+        background-color: hsl(0, 0%, 30%);
+    }
+
+
+    .search_button .menu_search_bg {
+        visibility: visible;
+        opacity: 0.6;
+    }
+
+    .menu_button .search {
+        transition: 0.2s 0s !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .menu_button .mobile_search_bg {
+        transform: translatey(-100%);
+        visibility: hidden !important;
+        transition: 0.6s 0.2s !important;
+        opacity: 0 !important;
+    }
+
+    .body_widgets {
+        padding: 10px;}
+
+    .post_widgets {
+        width: 60%;
+    }
+
+    .single_post{
+    width: 100%;
+    margin: unset;
+  }
+
+    .single_post .post-body img{
+        width: 100%;
+    }
+
+    .sidebar_widgets {
+        width: 40%;
+    }
+
+    .footer {
+        height: auto;
+        display: block;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .footer_menu, .footer_copyright {
+        width: 98%;
+        margin: 10px 0;
+        display: inline-block;
+    }
+
+    .Border_line{
+        width: 80%;
+        height: 0px;
+        border-bottom: 1px solid hsla(0, 0%, 50%, 1);
+        margin: 0 auto;
+    }
+
+    .content_form{
+        width: auto;
+    }
+
+@media only screen and (max-width:700px) {
+
+
+    .body_widgets {
+      display: inline-block;
+    }
+
+    .post_widgets {
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .multiple_post {
+        padding: 10px;
+    }
+
+    .single_post{
+        padding: 10px;
+      }
+
+    .sidebar_widgets {
+      width: 100%;
+      padding: 20px 0;
+    }
+
+  }
+
+
+]]></b:skin>
+
+<b:template-skin>
+
+body#layout .header {height: unset; display: unset;padding: unset; position: unset;}
+body#layout .full_menu {display: unset;}
+body#layout .body_widgets {width: unset;height: unset;display: unset;padding: unset;}
+body#layout .post_widgets {width: unset;height: unset;padding: unset;}
+body#layout .sidebar_widgets {width: unset;height: unset;padding: unset;position: unset;top: unset;}
+body#layout .footer {width: unset; height: unset;display: unset;justify-content: unset;align-items: unset;padding: unset;}
+body#layout .footer_menu {width:unset;}
+
+</b:template-skin>
+
+</head>
+
+<body>
+
+    <!-- All Widgets -->
+
+    <div class="full_body">
+
+
+        <script src="https://raw.githack.com/TemplateFly/TemplateFly/master/script.js"></script>
+        <div class="header">
+            <div class="menu_icon"></div>
+            <header class="logo_widgets Logo_menu">
+                <b:section class="header_logo " id="header_logo" name="Header Widgets" maxwidgets='1'>
+                     <b:widget id='Image1' locked='true' title='Header Logo' type='Image' visible='true'>
+                        <b:widget-settings>
+                        <b:widget-setting name='displayUrl'>
+                            http://3.bp.blogspot.com/-HvIJB1LizTA/XpQxXNgsT_I/AAAAAAAAAAQ/rSEUMW0hnoUV2sP_Ts99vhZAVB_EWd37QCK4BGAYYCw/s1600/Template%2BFly%2BFree%2BLogo.png
+                        </b:widget-setting>
+                        <b:widget-setting name='displayHeight'>502</b:widget-setting>
+                        <b:widget-setting name='sectionWidth'>391</b:widget-setting>
+                        <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+                        <b:widget-setting name='displayWidth'>612</b:widget-setting>
+                        <b:widget-setting name='link'>http://#</b:widget-setting>
+                        <b:widget-setting name='caption' />
+                        </b:widget-settings>
+                        <b:includable id='main'>
+                        <div class='widget-content'>
+                            <b:tag cond='data:link' expr:href='data:blog.homepageUrl' name='a'>
+                            <img expr:alt='data:title' expr:src='data:sourceUrl' />
+                            </b:tag>
+                        </div>
+                        </b:includable>
+                        <b:includable id='content'/>
+                    </b:widget>
+                </b:section>
+            </header>
+
+            <div class="full_menu Logo_menu">
+
+                <nav class="menu_widgets">
+
+                    <b:section class="header_menu side_menu" id="header_menu" name="Header Widgets" maxwidgets='1'>
+                        <b:widget id='LinkList1' locked='true' title='Header Menu' type='LinkList' visible='true'>
+                            <b:widget-settings>
+                                <b:widget-setting name='sorting'>NONE</b:widget-setting>
+                                <b:widget-setting name='text-0'>CONTACT US</b:widget-setting>
+                                <b:widget-setting name='link-0'>https://demo-templatefly.blogspot.com/p/contect-us.html</b:widget-setting>
+                                <b:widget-setting name='text-1'>TEMPLATE FLY</b:widget-setting>
+                                <b:widget-setting name='link-1'>https://templatefly.mrjaz.com/</b:widget-setting>
+                                <b:widget-setting name='text-2'>FREE DOWNLOAD</b:widget-setting>
+                                <b:widget-setting name='link-2'>https://templatefly.mrjaz.com/2020/04/templatefly-new-blogger-template-free-download.html</b:widget-setting>
+                                <b:widget-setting name='text-3'>DOCUMENTATION</b:widget-setting>
+                                <b:widget-setting name='link-3'>https://docs-templatefly.mrjaz.com/2020/04/templatefly-documentation-free-blogger-template.html</b:widget-setting>
+                              </b:widget-settings>
+                            <b:includable id='main'>
+                                <div class='widget-content'>
+                                    <ul>
+                                        <b:loop values='data:links' var='link'>
+                                            <li>
+                                                <a expr:href='data:link.target'><data:link.name /></a>
+                                            </li>
+                                        </b:loop>
+                                    </ul>
+                                </div>
+                            </b:includable>
+                            <b:includable id='content'/>
+                        </b:widget>
+                       
+                    </b:section>
+
+
+                    <script>
+                        document.querySelector(".menu_icon").addEventListener("click", () => {
+                            var element = document.body;
+                            element.classList.toggle("menu_button");
+                        });
+                    </script>
+                </nav>
+
+               
+
+
+
+                <div id="header-1">
+
+                    <div class="menu_search_button" type="button">
+                    </div>
+
+                    <form class="search" expr:action="data:blog.searchUrl">
+                        <input class="text search_box" placeholder="Search.. " name='q' type='search' autocomplete="on" />
+                        <input class='search_btn' type='submit' value="" />
+                    </form>
+
+                    <script>
+                        document.querySelector(".menu_search_button").addEventListener("click", () => {
+                            var element = document.body;
+                            element.classList.toggle("search_button");
+                        });
+
+                    </script>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile_menu_bg"></div>
+
+        <div class="menu_search_bg"></div>
+
+        <div class="mobile_search_bg"></div>
+
+
+
+        <div class="body_widgets">
+            <main class="post_widgets">
+                <b:section class="body_post" id="body_post" name="Body Widgets" maxwidgets='3'>
+                    <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' visible='true'>
+                        <b:widget-settings>
+                            <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+                            <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+                            <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                            <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+                            <b:widget-setting name='style.urlcolor'>#2196f3</b:widget-setting>
+                            <b:widget-setting name='showAuthor'>true</b:widget-setting>
+                            <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
+                            <b:widget-setting name='style.linkcolor'>#757575</b:widget-setting>
+                            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                            <b:widget-setting name='timestampLabel'>true</b:widget-setting>
+                            <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                            <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                            <b:widget-setting name='showLabels'>true</b:widget-setting>
+                            <b:widget-setting name='showLocation'>true</b:widget-setting>
+                            <b:widget-setting name='postLabelsLabel'>true</b:widget-setting>
+                            <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+                            <b:widget-setting name='postsPerAd'>3</b:widget-setting>
+                            <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+                            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+                            <b:widget-setting name='showInlineAds'>true</b:widget-setting>
+                            <b:widget-setting name='showReactions'>true</b:widget-setting>
+                        </b:widget-settings>
+
+                        <b:includable id='main' var='this'>
+                            
+                            <div class="multiple_post" >    
+                                <b:loop index='i' values='data:posts' var='post'>
+                                    <b:if cond='data:view.isMultipleItems' >
+                                        <b:include data='post' name='multiple_items'/>
+                                    </b:if>
+                                </b:loop>
+                            </div>
+                            
+                            <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                                <b:include name='nextprev' cond='!data:view.isSingleItem' />
+                            </b:if>
+                          
+
+                           
+                            <b:loop index='i' values='data:posts' var='post'>
+                                <b:if cond='data:view.isSingleItem'>
+                                    <b:include data='post' name='single_items'/>
+                                </b:if>
+                            </b:loop>
+
+                            <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                                <b:include name='nextprev' cond='data:view.isPost'/>
+                            </b:if>
+                        </b:includable>
+
+
+                        <b:includable id='nextprev' >
+                                <div class="multiple_post_Pagination">
+                                    <b:if cond='data:olderPageUrl'>
+                                        <a  expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' >OLD POSTS</a>
+                                        <b:else/>
+                                        <a class='Pagination_nolink'>OLD POSTS</a>
+                                    </b:if>
+
+                                    <a class='home-link' expr:href='data:blog.homepageUrl'>HOME</a>
+
+                                    <b:if cond='data:newerPageUrl'>
+                                        <a  expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' >NEW POSTS</a>
+                                        <b:else/>
+                                        <a class='Pagination_nolink'>NEW POSTS</a> 
+                                    </b:if>
+                                </div>
+                        </b:includable>
+
+
+
+                        <b:includable id='multiple_items' var='post'>
+                        
+                                <!-- multiple_items post Image -->
+                            <article>
+                                <div class='multiple_post_img'>
+                                    <a expr:href='data:post.url'>
+                                        <img expr:src='data:post.featuredImage' expr:alt='data:post.title'  />
+                                    </a>
+                                </div>
+
+                                    <!-- multiple_items post title -->
+                                <div class='multiple_post_title'>
+                                    <h1 expr:href='data:post.url'>
+                                        <data:post.title />
+                                    </h1>
+                                </div>
+
+                                    <!-- multiple_items post Label / Timestamp -->
+                                <div class='multiple_post_detail'>
+
+                                    <a expr:href='data:post.labels.first.url'>
+                                        <data:post.labels.first..name />
+                                    </a>
+
+                                    <a expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
+                                        <data:post.date />
+                                    </a>
+                                </div>
+
+                                <!-- <b:loop values='data:post.labels ' var='label'>
+                                <b:if cond='data:i &lt; 4'>
+                                    <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
+                                </b:if>
+                                </b:loop> -->
+
+                            </article>
+
+                           
+                        
+                        </b:includable>
+
+                        <b:includable id='single_items' var='post'>
+                            <div class="single_post">
+
+                                    <!-- single_items Post Breadcrumbs -->
+                                <div class="single_post_header">
+
+                                    <div class="single_post_Pagination">
+                                        <a expr:href='data:blog.homepageUrl'>HOME </a><a> 〉</a><a expr:href='data:post.labels.first.url'><data:post.labels.first.name/> </a><a> 〉</a><a expr:href='data:post.labels.last.url'><data:post.labels.last.name/> </a><a> 〉</a><a><data:post.title/></a>
+                                    </div>
+
+                                    <h1><data:post.title /></h1>
+                                
+                                    <div class="single_post_date">
+                                        <a expr:title='data:post.date.iso8601'><data:post.date /></a>
+                                    </div>
+                                </div>
+
+                                <div class='post-body'>
+                                    <data:post.body/>
+                                </div>
+
+                                <div class="single_post_labels">
+                                    <b:loop values='data:post.labels' var='label'>
+                                    <a expr:href='data:label.url'><data:label.name /></a>
+                                    </b:loop>
+                                </div>
+                            </div>
+                           
+                        </b:includable>
+
+
+                        <b:includable id='aboutPostAuthor'/>
+                        <b:includable id='addComments'/>
+                        <b:includable id='commentAuthorAvatar'/>
+                        <b:includable id='commentDeleteIcon' var='comment'/>
+                        <b:includable id='commentForm' var='post'/>
+                        <b:includable id='commentFormIframeSrc' var='post'/>
+                        <b:includable id='commentItem' var='comment'/>
+                        <b:includable id='commentList' var='comments'/>
+                        <b:includable id='commentPicker' var='post'/>
+                        <b:includable id='comments' var='post'/>
+                        <b:includable id='commentsTitle'/>
+                        <b:includable id='feedLinks'/>
+                        <b:includable id='feedLinksBody' var='links'/>
+                        <b:includable id='homePageLink'/>
+                        <b:includable id='iframeComments' var='post'/>
+                        <b:includable id='inlineAd' var='post'/>
+                        <b:includable id='post' var='post'/>
+                        <b:includable id='postBody' var='post'/>
+                        <b:includable id='postBodySnippet' var='post'/>
+                        <b:includable id='postCommentsLink'/>
+                        <b:includable id='postFooter' var='post'/>
+                        <b:includable id='postFooterAuthorProfile' var='post'/>
+                        <b:includable id='postHeader' var='post'/>
+                        <b:includable id='postMeta' var='post'/>
+                        <b:includable id='postPagination'/>
+                        <b:includable id='postTitle' var='post'/>
+                        <b:includable id='threadedCommentForm' var='post'/>
+                        <b:includable id='threadedCommentJs' var='post'/>
+                        <b:includable id='threadedComments' var='post'/>
+                        <b:includable id='postCommentsAndAd' var='post'/>
+                    </b:widget>
+                </b:section>
+            </main>
+
+            <aside class="sidebar_widgets">
+              <b:section id="right_sidebar" name="Right Widgets" >
+                <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' visible='true'>
+                    <b:includable id='main'>
+                        <div class="right_sidebar">
+                            <b:include name='widget-title'/>
+                            <p>Send your e-mail below and get notification on the latest blog posts.</p>
+                            <form class="Subscribe_form" action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;newwindow\&quot;); return true&quot;' method='post' target='newwindow'>
+                                <input autocomplete='on'  placeholder='Enter Email Address' name='email' type='email' required="required" />
+                                <input  value='SUBSCRIBE here' type='submit'/>
+                                <input expr:value='data:feedPath' name='uri' type='hidden'/>
+                                <input name='loc' type='hidden' value='en_US'/>
+                            </form>
+                        </div>
+                    </b:includable>
+                    <b:includable id='content'/>
+                  </b:widget>
+              </b:section>
+            </aside>
+        </div>
+
+
+        <footer class="footer">
+            <b:section class="footer_widgets footer_menu" id="footer_menu" name="Footer Widgets" maxwidgets='1'>
+                <b:widget id='PageList1' locked='true' title='Footer Menu' type='PageList' version='2' visible='true'>
+                    <b:widget-settings>
+                      <b:widget-setting name='pageListJson'><![CDATA[{'4118669659351004664': {'href': 'https://demo-templatefly.blogspot.com/p/about-us.html', 'title': 'ABOUT US', 'position': 0}, '420101690685152098': {'href': 'https://demo-templatefly.blogspot.com/p/contect-us.html', 'title': 'CONTACT US', 'position': 1}, '8031279760475123345': {'href': 'https://demo-templatefly.blogspot.com/p/privacy-pocily.html', 'title': 'PRIVACY POCILY', 'position': 2}, '1952448559428241801': {'href': 'https://demo-templatefly.blogspot.com/p/dmca.html', 'title': 'DMCA', 'position': 3}}]]></b:widget-setting>
+                      <b:widget-setting name='homeTitle'>HOME</b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'>
+                        <b:loop values='data:links' var='link'>
+                            <a expr:href='data:link.href'><data:link.title/></a>
+                        </b:loop>
+                    </b:includable>
+                    <b:includable id='content'/>
+                    <b:includable id='overflowButton'/>
+                    <b:includable id='overflowablePageList'/>
+                    <b:includable id='pageLink'/>
+                    <b:includable id='pageList'/>
+                </b:widget>
+            </b:section>
+
+            <div class="Border_line"></div>
+            
+            <div class="footer_copyright" id="footer_copyright">
+                <a href='/'><data:blog.title/> </a>™ © <script type='text/javascript'>document.write(new Date().getFullYear());</script>, All Rights Reserved.
+            </div>
+        </footer>
+
+
+
+    </div>
+
+    <!-- All Widgets Close -->
+
+
+    <div style="visibility: hidden; opacity: 0; display: none; resize: vertical; overflow: auto;">
+        <b:section  id="hidden_widgets" name="Hidden Widgets">
+            <b:widget id='ContactForm1' locked='false' title='Contact Form' type='ContactForm' visible='true'>
+                <b:includable id='main'/>
+
+                <b:includable id='content'/>
+            </b:widget>
+        </b:section>
+    </div>
+
+
+
+</body>
+
+</html>
